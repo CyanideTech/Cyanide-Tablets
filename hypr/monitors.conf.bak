@@ -1,0 +1,7 @@
+# >>> hyprmon:begin >>> (auto-generated — do not edit between markers)
+monitor=desc:Acer Technologies Acer V206HQLC,1920x1080@60.00,0x0,1
+monitor=desc:Dell Inc. DELL P2219H,1920x1080@60.00,1920x0,1
+
+# Fallback for unknown monitors
+monitor=,preferred,auto,1
+# <<< hyprmon:end <<<

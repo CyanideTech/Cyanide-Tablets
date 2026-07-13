@@ -1,0 +1,184 @@
+* {
+    font-family: arimo-nerd, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    transition: background-color 250ms ease, color 250ms ease, border-color 250ms ease, opacity 250ms ease, width 250ms ease, height 250ms ease, margin 250ms ease, padding 250ms ease;
+    border-radius: 16px;
+    margin-top: 3px;
+    color: #EDE6FF;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+/* Modules containers */
+.modules-left,
+.modules-center,
+.modules-right {
+    background-color: rgba(28, 16, 60, 0.75);
+    margin: 5px;
+    padding: 4px 8px;
+    border-radius: 18px;
+}
+
+/* Workspaces */
+#workspaces {
+    opacity: 0.9;
+}
+
+#workspaces button {
+    padding: 6px 10px;
+    margin: 0 4px;
+    color: #CBB6FF;
+    background-color: transparent;
+    border-radius: 12px;
+}
+
+#workspaces button:hover {
+    background-color: rgba(179, 136, 255, 0.2);
+    color: #FFFFFF;
+}
+
+#workspaces button.active {
+    background-color: #B388FF;
+    color: #120A28;
+}
+
+/* Window title */
+#window {
+    opacity: 0.9;
+    margin: 5px 8px;
+}
+
+/* Generic modules */
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#tray,
+#mode,
+#idle_inhibitor,
+#mpd {
+    padding: 6px 12px;
+    margin: 3px;
+    background-color: rgba(36, 16, 79, 0.7);
+    border-radius: 14px;
+}
+
+/* Hover glow */
+#clock:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#network:hover,
+#pulseaudio:hover {
+    background-color: rgba(255, 77, 148, 0.2);
+}
+
+/* Battery states */
+#battery {
+    color: #EDE6FF;
+}
+
+#battery.charging,
+#battery.plugged {
+    background-color: rgba(155, 255, 176, 0.2);
+    color: #9BFFB0;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #FF4D94;
+    color: #FFFFFF;
+}
+
+/* Network */
+#network.disconnected {
+    background-color: #FF4D94;
+}
+
+/* Audio */
+#pulseaudio.muted {
+    background-color: rgba(255, 92, 138, 0.3);
+    color: #FF5C8A;
+}
+
+/* Power profiles */
+#power-profiles-daemon.performance {
+    background-color: #FF4D94;
+    color: #FFFFFF;
+}
+
+#power-profiles-daemon.balanced {
+    background-color: #B388FF;
+    color: #120A28;
+}
+
+#power-profiles-daemon.power-saver {
+    background-color: #9BFFB0;
+    color: #120A28;
+}
+
+/* Tray */
+#tray {
+    padding: 6px 10px;
+}
+
+/* Launcher buttons */
+#custom-app-launcher,
+#custom-browser-launcher,
+#custom-files-launcher,
+#custom-term-launcher,
+#custom-steam-launcher,
+#custom-discord-launcher {
+    padding: 6px 10px;
+    margin: 3px;
+    background-color: rgba(36, 20, 80, 0.7);
+    color: #EDE6FF;
+    border-radius: 14px;
+}
+
+#custom-app-launcher:hover,
+#custom-browser-launcher:hover,
+#custom-files-launcher:hover,
+#custom-term-launcher:hover,
+#custom-steam-launcher:hover,
+#custom-discord-launcher:hover {
+    background-color: rgba(255, 77, 148, 0.25);
+}
+
+/* Media */
+#custom-media {
+    background-color: rgba(139, 233, 253, 0.15);
+    color: #8BE9FD;
+}
+
+/* Temperature */
+#temperature.critical {
+    background-color: #FF4D94;
+}
+
+/* Idle inhibitor */
+#idle_inhibitor.activated {
+    background-color: #B388FF;
+    color: #120A28;
+}
+
+/* MPD */
+#mpd {
+    color: #9BFFB0;
+}
+
+#mpd.disconnected {
+    background-color: #FF4D94;
+}
+
+/* Subtle glow accent line on hover */
+button:hover {
+    box-shadow: 0 0 8px rgba(255, 77, 148, 0.6);
+}

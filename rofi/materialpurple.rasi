@@ -1,0 +1,134 @@
+* {
+    base00: #120A28;
+    base01: #1C103C;
+    base02: #24104F;
+    base03: #3A1A6A;
+
+    base04: #CBB6FF;
+    base05: #EDE6FF;
+    base06: #F5EEFF;
+    base07: #FFFFFF;
+
+    base08: #FF5C8A;
+    base09: #FF7AAE;
+    base0A: #FF9AD1;
+    base0B: #9BFFB0;
+    base0C: #8BE9FD;
+    base0D: #B388FF;
+    base0E: #D0A6FF;
+    base0F: #FF4D94;
+
+    spacing: 0;
+    background-color: transparent;
+}
+
+window {
+    transparency: "real";
+    background-color: #120A28CC;
+    border-radius: 20px;
+}
+
+mainbox {
+    children: [inputbar, message, mode-switcher, listview];
+    spacing: 30px;
+    padding: 30px 0;
+    border: 1px;
+    border-color: @base0D;
+    border-radius: 20px;
+}
+
+inputbar {
+    padding: 0 30px;
+    children: [prompt, textbox-prompt-colon, entry, case-indicator];
+}
+
+prompt {
+    text-color: @base0D;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+    margin: 0 1ch 0 0;
+    text-color: @base0D;
+}
+
+entry {
+    text-color: @base07;
+}
+
+case-indicator {
+    text-color: @base0F;
+}
+
+mode-switcher {
+    spacing: 12px;        /* space between mode buttons */
+    padding: 10px 30px;   /* space around the whole row */
+    border: 1px 0;
+    border-color: @base0D;
+}
+
+mode-switcher button {
+    margin: 0 6px;        /* extra gap between each button */
+    border-radius: 14px;
+}
+
+button, textbox {
+    background-color: @base03;
+    text-color: @base07;
+    padding: 10px 14px;
+    border-radius: 12px;
+}
+
+button selected {
+    background-color: @base0D;
+}
+
+listview {
+    scrollbar: true;
+    margin: 0 10px 0 30px;
+}
+
+scrollbar {
+    background-color: @base03;
+    handle-color: @base0D;
+    handle-width: 10px;
+    border: 0 1px;
+    border-color: @base0D;
+    margin: 0 0 0 20px;
+    border-radius: 10px;
+}
+
+element {
+    padding: 8px;
+    spacing: 8px;
+    highlight: bold underline;
+    children: [element-icon, element-text];
+    border-radius: 12px;
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color: inherit;
+    foreground-color: inherit;
+}
+
+element normal {
+    background-color: transparent;
+}
+
+element selected {
+    background-color: @base0D;
+}
+
+element normal normal, element selected normal, element alternate normal {
+    text-color: @base07;
+}
+
+element normal urgent, element selected urgent, element alternate urgent {
+    text-color: @base0F;
+}
+
+element normal active, element selected active, element alternate active {
+    text-color: @base0B;
+}
