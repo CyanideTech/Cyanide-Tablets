@@ -5,6 +5,7 @@ sudo pacman -S kitty --noconfirm
 sudo pacman -S waybar --noconfirm
 sudo pacman -S hyprpaper --noconfirm
 
+sudo rm -rf ~/.config/hyprland/hyprland.lua
 cp rofi ~/.config -f -r
 cp hypr ~/.config -f -r
 cp waybar ~/.config -f -r
